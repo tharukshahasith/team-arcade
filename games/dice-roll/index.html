@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Dice Roller & Coin Toss</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    /* 3D Canvas wrapper */
+    #diceCanvasContainer canvas {
+      border-radius: 1rem;
+      outline: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+  <!-- Back to Dashboard -->
+  <a href="../../index.html" class="absolute top-6 left-6 text-xs text-slate-400 hover:text-white flex items-center gap-1 border border-slate-800 bg-slate-900 px-3 py-1.5 rounded-lg transition z-10">
+    ← Back to Arcade
+  </a>
+
+  <!-- Card Container -->
+  <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl shadow-orange-500/10 relative overflow-hidden">
+    <h1 class="text-2xl font-black bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent mb-1">
+      3D Dice Roller
+    </h1>
+    <p class="text-xs text-slate-400 mb-4">Interactive 3D WebGL Simulation</p>
+
+    <!-- 3D Viewport Container -->
+    <div id="diceCanvasContainer" class="w-full h-56 flex items-center justify-center mb-4 relative cursor-grab active:cursor-grabbing">
+      <div id="coinOverlay" class="hidden text-8xl absolute select-none transition-transform duration-300">
+        🪙
+      </div>
+    </div>
+
+    <!-- Result Banner -->
+    <div id="resultText" class="text-base font-bold text-slate-300 mb-6 h-7 flex items-center justify-center">
+      Click "Roll 3D Dice" to roll!
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-3">
+      <button id="rollDiceBtn" class="flex-1 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 active:scale-95 text-white font-semibold py-3 rounded-xl text-sm transition shadow-lg shadow-orange-600/20">
+        🎲 Roll 3D Dice
+      </button>
+      <button id="flipCoinBtn" class="flex-1 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 active:scale-95 text-white font-semibold py-3 rounded-xl text-sm transition shadow-lg shadow-amber-600/20">
+        🪙 Flip Coin
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
