@@ -7,55 +7,50 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Three.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <style>
-    #viewport canvas {
-      border-radius: 1.25rem;
-      outline: none;
-    }
-  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 selection:bg-orange-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
 
   <!-- Back to Dashboard -->
-  <a href="../../index.html" class="absolute top-6 left-6 text-xs text-slate-400 hover:text-white flex items-center gap-1.5 border border-slate-800 bg-slate-900/80 backdrop-blur px-3.5 py-2 rounded-xl transition hover:border-slate-700 z-10 shadow-lg">
+  <a href="../../index.html" class="absolute top-6 left-6 text-xs text-slate-400 hover:text-white flex items-center gap-1.5 border border-slate-800 bg-slate-900/80 px-3.5 py-2 rounded-xl transition z-10 shadow-lg">
     ← Back to Arcade
   </a>
 
   <!-- Main Game Card -->
-  <div class="bg-slate-900/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 max-w-lg w-full text-center shadow-2xl shadow-orange-500/10 backdrop-blur">
+  <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-lg w-full text-center shadow-2xl shadow-orange-500/10 relative">
     
-    <div class="flex items-center justify-center gap-2 mb-1">
-      <span class="text-xs font-semibold tracking-wider uppercase text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2.5 py-0.5 rounded-full">
-        WebGL 3D Physics Feel
+    <div class="flex items-center justify-center gap-2 mb-2">
+      <span class="text-xs font-semibold uppercase tracking-wider text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2.5 py-0.5 rounded-full">
+        WebGL 3D Studio
       </span>
     </div>
 
-    <h1 class="text-2xl sm:text-3xl font-black bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent mt-1 mb-1">
+    <h1 class="text-2xl sm:text-3xl font-black bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent mb-1">
       3D Dice & Coin Studio
     </h1>
-    <p class="text-xs text-slate-400 mb-4">Click and drag with mouse to inspect 3D objects</p>
+    <p class="text-xs text-slate-400 mb-4">Drag with mouse/touch to inspect</p>
 
-    <!-- 3D Canvas Viewport -->
-    <div id="viewport" class="w-full h-64 sm:h-72 flex items-center justify-center mb-4 relative cursor-grab active:cursor-grabbing bg-radial from-slate-800/40 via-slate-900/40 to-transparent rounded-2xl border border-slate-800/50">
-      <!-- Three.js Canvas gets injected here -->
+    <!-- 3D Canvas Viewport (Fixed height to guarantee proper rendering) -->
+    <div id="viewport" style="width: 100%; height: 280px; min-height: 280px; position: relative;" class="flex items-center justify-center mb-4 bg-slate-950/60 rounded-2xl border border-slate-800 cursor-grab active:cursor-grabbing overflow-hidden">
+      <!-- Three.js Canvas will be placed here -->
     </div>
 
     <!-- Result Banner -->
-    <div id="resultText" class="text-base font-bold text-slate-300 mb-6 h-8 flex items-center justify-center tracking-wide">
+    <div id="resultText" class="text-base font-bold text-slate-300 mb-6 h-8 flex items-center justify-center">
       Ready to Roll or Flip!
     </div>
 
-    <!-- Mode Selector & Controls -->
+    <!-- Buttons -->
     <div class="flex gap-3">
-      <button id="rollDiceBtn" class="flex-1 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 hover:brightness-110 active:scale-95 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-orange-600/30 flex items-center justify-center gap-2">
-        <span>🎲</span> Roll 3D Dice
+      <button id="rollDiceBtn" type="button" class="flex-1 bg-gradient-to-r from-orange-600 to-amber-600 hover:brightness-110 active:scale-95 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-orange-600/30">
+        🎲 Roll 3D Dice
       </button>
-      <button id="flipCoinBtn" class="flex-1 bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 hover:brightness-110 active:scale-95 text-slate-950 font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2">
-        <span>🪙</span> Flip 3D Coin
+      <button id="flipCoinBtn" type="button" class="flex-1 bg-gradient-to-r from-yellow-500 to-amber-500 hover:brightness-110 active:scale-95 text-slate-950 font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/30">
+        🪙 Flip 3D Coin
       </button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script loaded after DOM -->
+  <script src="./script.js"></script>
 </body>
 </html>
