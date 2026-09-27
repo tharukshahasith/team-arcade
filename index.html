@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batch Arcade - 8-in-1 Mini Games Hub</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🕹️</span>
+        <div>
+          <h1 class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Batch Arcade Hub
+          </h1>
+          <p class="text-xs text-slate-400">8 Developers • 8 Games • 1 Team</p>
+        </div>
+      </div>
+      <a href="https://github.com" target="_blank" class="text-xs px-3 py-1.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+        GitHub Repository ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Hero & Grid -->
+  <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+        Select a Game to Play
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base">
+        Built collaboratively using Git & GitHub. Click on any game card below to play directly in your browser.
+      </p>
+    </div>
+
+    <!-- 8 Games Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Game 1 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">✊✋✌️</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Rock Paper Scissors</h3>
+          <p class="text-xs text-slate-400 mt-1">Play against computer logic with live score tracking.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 1</span>
+          <a href="games/rps/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">🔢</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition">Number Guesser</h3>
+          <p class="text-xs text-slate-400 mt-1">Guess the hidden number between 1-100 with dynamic hints.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 2</span>
+          <a href="games/guess-number/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">❌⭕</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Tic-Tac-Toe</h3>
+          <p class="text-xs text-slate-400 mt-1">Classic 3x3 turn-based board duel for two players.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 3</span>
+          <a href="games/tic-tac-toe/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 4 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">🃏</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Memory Match</h3>
+          <p class="text-xs text-slate-400 mt-1">Flip card pairs and test visual short-term recall.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 4</span>
+          <a href="games/memory-cards/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-rose-500/50 hover:shadow-lg hover:shadow-rose-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">🔨</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-rose-400 transition">Whack-a-Mole</h3>
+          <p class="text-xs text-slate-400 mt-1">Reflex test: click popping targets before timer runs out.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 5</span>
+          <a href="games/whack-mole/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 6 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">🔤</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition">Word Scramble</h3>
+          <p class="text-xs text-slate-400 mt-1">Unscramble jumbled tech words against countdown clock.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 6</span>
+          <a href="games/word-scramble/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 7 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">⌨️</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition">Speed Typer</h3>
+          <p class="text-xs text-slate-400 mt-1">Measure typing words-per-minute (WPM) and accuracy.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 7</span>
+          <a href="games/speed-typing/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+      <!-- Game 8 -->
+      <div class="game-card group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition flex flex-col justify-between">
+        <div>
+          <div class="text-4xl mb-3">🎲</div>
+          <h3 class="text-lg font-bold text-white group-hover:text-orange-400 transition">Dice & Toss</h3>
+          <p class="text-xs text-slate-400 mt-1">Random dice rolls and coin flipping generator.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500 font-mono">Member 8</span>
+          <a href="games/dice-roll/index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-white transition">
+            Play Game
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <p>Computer Science 2nd Year • Group Project Onboarding Practice</p>
+  </footer>
+
+</body>
+</html>
